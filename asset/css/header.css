@@ -1,0 +1,47 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--vert);
+    height: 90px;
+    .logo {
+        position: relative;
+        height: 90px;
+        margin-top: 14px;
+        z-index: 0;
+    }
+    .titleHeader  {   
+        display: flex;
+        justify-content: end;
+        position: relative;
+        font-family: 'Cartoo Nature';
+        color: var(--jaune);
+        letter-spacing: 2px;
+        
+        span {
+            display: inline-block;
+            padding-left: 50px;
+        }
+    }
+    .buttonContener{
+        display: flex;
+        justify-items: flex-end;
+    
+        .buttonHeader{
+            background-color: var(--jaune);
+            margin: 4em;
+            padding: 4px;
+            text-decoration: none;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px;
+            font-size: small;   
+            &:hover{
+                border-radius: 2px 2pc 2px;
+                box-shadow: 2px 2px 2px yellow;
+            }
+        }
+    }   
+}
+

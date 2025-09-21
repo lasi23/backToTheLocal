@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Back To The Local</title>
+        
+ <!-- *****************************************Link fonte*********************************************** -->
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!-- *****************************************Link CSS************************************************ -->
+    
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/header.css">
+    <link rel="stylesheet" href="asset/css/nav.css">
+    
+    
+<!-- ***************lien api carte interactif************************* -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</head>
+<body>
+    <header>
+        <div class="titleHeader">
+            <img class="logo" src="asset/image/videoframe_4606-removebg-preview.png" alt="">
+            <h1 class="title">
+            BACK TO <br>
+            <span>THE LOCAL</span>
+        </h1>
+        </div>
+        <div class="buttonContener">
+            <a class="buttonHeader" href="">Je suis producteur/artisan</a>
+            <a class="buttonHeader" href="">Je veux acheter local</a>
+        </div>
+    </header>
+    <nav>
+        <div class="navLeft">
+            <a class="navButton" href="#">Producteurs</a>
+            <a class="navButton" href="#">Points de collecte</a>
+            <a class="navButton" href="#">Agenda</a>
+            <a class="navButton" href="#">Map</a>
+        </div>
+        <div class="navRight">
+            <a class="navButtonR" href="#">Connection</a>
+            <img class="iconShopping" src="asset/image/iconShopping.svg" alt="">
+        </div>
+    </nav>
+    <main>
+    <div class="containerPresentation">
+        <h1 class="titrePresentation">
+            Le futur c'est le local
+        </h1>
+        <p class="textePresentation">
+            Se fournir plus près pour aller plus loin en trouvant les contacts autour de vous içi
+        </p>
+        <div class="containerButtonPresentation
+            ">
+            <a class="localisationPresentation" href="#">Localisez vous <img src="asset/image/target_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="targert"></a>
+
+                <a id="dropdownLink" class="scrollPresentation" href="#">
+                    Les Produits <img src="asset/image/circle-arrow-down.png" alt="">
+                </a>
+                <div id="dropdownContent" class="dropdown-content">
+                    <a>Tous</a>
+                    <a>Fruits et Légumes</a>
+                    <a>Viande et Poissons</a>
+                    <a>Boulangerie</a>
+                    <a>Bières et Vins</a>
+                    <a>Boissons Non Alcoolisées</a>
+                    <a>Produits Non Consommables</a>
+                </div>
+                <button class="buttonPresentation">Envoyez</button>
+            </div>
+        </div>
+        <div class="contenerMain">
+            <div class="contenerMapCalendar">
+                <div id="map"></div>
+                <div id="calendarContainer">
+                    <h2 id="month-year"></h2>
+                    <table id="calendar"></table>
+                </div>
+            </div>
+            <div class="contenerEvenement">
+                <h2>
+                    évènement
+                </h2>
+                <div class="event1"></div>
+                <div class="event2"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="contenerFooter">
+        <img class="imgFooter" src="asset/image/mushroomDance.png" alt="">
+        <div class="col-1">
+            <a href="#">Notre charte producteur</a> 
+            <a href="#">CGU</a>
+        </div>  
+        <div class="col-2">
+            <a href="#">Contactez-nous</a>
+            <a href="#">Politique de confidentialité</a> 
+        </div>
+        <div class="col-3">
+            <a href="#">Mention légal</a>   
+        </div>
+    </footer>
+<script src="script.js"></script>
+<script src="asset/js/menuDeroulantAcceuil.js"></script>
+<script src="asset/js/calendar.js"></script>
+</body>
+</html>

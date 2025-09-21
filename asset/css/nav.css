@@ -1,0 +1,55 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: var(--jaune);
+    .navLeft{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+    }
+    .navRight{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 60%;
+    }
+}
+
+.navButton{
+    margin-left: 10px;
+}
+
+.navButtonR, .iconShopping{
+    margin-left: 9%;
+    margin-right: 10%;
+}
+
+.navButton, .navButtonR{
+    background-color: var(--orange);
+    width:8rem;
+    height: 2rem;
+    padding-top: 6px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    color: aliceblue;
+    font-size: small;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* ombre noir avec transparence */
+    
+}
+
+.navButtonR:hover,.navButton:hover{
+    box-shadow: 1px 1px 1px black;
+    color: var(--vert);
+}
+
+
+
+.iconShopping{
+    background-color: var(--orange);
+    padding: 5px;
+    border-radius: 15px 0 15px 0;
+}
+
