@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Back To The Local</title>
+        
+ <!-- *****************************************Link font*********************************************** -->
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!-- *****************************************Link CSS************************************************ -->
+    
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    
+    
+</head>
+<body>
+    <header>
+        <div class="titleHeader">
+            <img class="logo" src="../image/videoframe_4606-removebg-preview.png" alt="">
+            <h1 class="title">
+                BACK TO <br>
+                <span>THE LOCAL</span>
+            </h1>
+        </div>
+        <div class="buttonContener">
+            <a class="buttonHeader" href="">Je suis producteur/artisan</a>
+            <a class="buttonHeader" href="">Je veux acheter local</a>
+        </div>
+    </header>
+    <nav>
+        <div class="navLeft">
+            <a class="navButton" href="#">Producteurs</a>
+            <a class="navButton" href="#">Points de collecte</a>
+            <a class="navButton" href="#">Agenda</a>
+            <a class="navButton" href="#">Map</a>
+        </div>
+        <div class="navRight">
+            <a class="navButtonR" href="#">Connection</a>
+            <img class="iconShopping" src="../image/iconShopping.svg" alt="">
+        </div>
+    </nav>
+    <main>
+        <input type="text" id="adresse" placeholder="adresse">
+        <input type="text" id="nomEntreprise" placeholder="Nom de l'entreprise">
+        <input type="text" id="specialite" placeholder="spécialités">
+        <button id="chAdresse">Ce géolocaliser</button>
+        <div id="resultat"></div>
+    </main>
+    <footer class="contenerFooter">
+        <img class="imgFooter" src="../image/mushroomDance.png" alt="">
+        <div class="col-1">
+            <a href="#">Notre charte producteur</a> 
+            <a href="#">CGU</a>
+        </div>  
+        <div class="col-2">
+            <a href="#">Contactez-nous</a>
+            <a href="#">Politique de confidentialité</a> 
+        </div>
+        <div class="col-3">
+            <a href="#">Mention légal</a>   
+        </div>
+    </footer>
+    <script src="../js/prod.js"></script>
+    <!-- ****script map****** -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    
+</body>
+</html>

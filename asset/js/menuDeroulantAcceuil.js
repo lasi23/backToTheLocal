@@ -1,52 +1,60 @@
 
 
+// ------------Variable-------------
 const lienMenu = document.querySelector("#dropdownLink");
 const menu = document.querySelector("#dropdownContent");
-const choix = menu.querySelectorAll("a")
+const choix = menu.querySelectorAll("a");
 
 
-
-function hoverMenu (){
-
-// ------------rend le menu visible------
-    lienMenu.addEventListener("mouseenter", () => {
-
-        menu.style.visibility = "visible";
-        
-    })
-    
-    // -------------------rend le menu invisible------
-    lienMenu.addEventListener("mouseleave", () => {
-        // --------avec un temp avant de disparaitre pour pouvoir passer sur les éléments
-        setTimeout(() => {           
-            if (!menu.matches(":hover")){
-            menu.style.visibility = "hidden";
-            console.log("mousse sort de l'élément")
-            }
-        }, 200)
-    })
-
-// --------garde le menu déroulé------------
-    menu.addEventListener("mouseenter", () => {
-    
-        menu.style.visibility = "visible";
-        
-    })
-    
-    // -----------rend le menu invisible--------
-    menu.addEventListener("mouseleave", () => {
-        
-        menu.style.visibility = "hidden";
-    })
-}
-
-
-
-hoverMenu();
-
-// -------------sélectionne le choix et l'affiche ---------
+// -----Gestion click menu---------
 choix.forEach(item => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (event) => {
+        event.preventDefault();
         lienMenu.textContent = item.textContent;
+        menu.classList.remove("open");
     })
 })
+
+// ----Ouverture du menu en mode responsive-----
+lienMenu.addEventListener("click", (event) => {
+    if(window.innerWidth <= 768){
+        event.preventDefault();
+        menu.classList.toggle("open");
+    }
+});
+
+// -----Hover en mode desktop-----
+lienMenu.addEventListener("mouseenter", () => {
+    if(window.innerWidth > 768){
+        menu.style.visibility = "visible";
+    }
+});
+
+lienMenu.addEventListener("mouseleave", () => {
+    if(window.innerWidth > 768){
+        setTimeout(() => {           
+            if (!menu.matches(":hover")){
+                menu.style.visibility = "hidden";
+            }
+        }, 200)
+    }
+});
+
+menu.addEventListener("mouseenter", () => {
+    if(window.innerWidth > 768){
+        menu.style.visibility = "visible";
+    }
+});
+
+menu.addEventListener("mouseleave", () => {
+    if(window.innerWidth > 768){
+        menu.style.visibility = "hidden";
+    }
+});
+
+// -----Nettoyage au redimensionnement---------
+window.addEventListener("resize", () => {
+    if(window.innerWidth > 768){
+        menu.classList.remove("open");
+    }
+});

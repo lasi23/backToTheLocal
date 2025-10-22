@@ -46,3 +46,58 @@ header {
     }   
 }
 
+
+/* ***************************responsive*************************************** */
+
+
+@media (max-width: 768px) {
+    header{
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+    gap: 1em;
+    text-align: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .titleHeader {
+        justify-content: center;
+
+    span {
+        padding-left: 0;
+        display: block;
+        margin-top: 0.5em;
+        }
+    }
+
+    .buttonContener {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .buttonHeader {
+        width: auto;
+        margin: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleHeader {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .buttonContener {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .buttonHeader {
+        width: 80%;
+        }
+}
+
+

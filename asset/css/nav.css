@@ -7,13 +7,13 @@ nav{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 60%;
+        gap: 1em;
     }
     .navRight{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        width: 60%;
+        gap: 1em;
     }
 }
 
@@ -53,3 +53,30 @@ nav{
     border-radius: 15px 0 15px 0;
 }
 
+
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5em;
+
+    .navLeft, .navRight {
+        justify-content: center;
+        width: 100%;
+        gap: 0.5em;
+        flex-wrap: wrap;
+    }
+
+    .navButton, .navButtonR {
+        width: auto;
+        font-size: 0.8rem;
+        padding: 0.3em 0.6em;
+    }
+
+    .iconShopping {
+      margin-top: 0.5em;
+    }
+  }
+}
